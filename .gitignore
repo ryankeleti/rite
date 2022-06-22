@@ -1,0 +1,8 @@
+/target
+/public
+/static
+/posts
+/content
+Cargo.lock
+askama.toml
+config.toml

@@ -34,3 +34,6 @@ posts_embed_scripts = "posts/scripts"
 
 # Extra posts scripts (embedded).
 posts_src_scripts = ["https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"]
+
+# Optional noscript message for posts.
+posts_noscript = "Scripts disabled for posts"

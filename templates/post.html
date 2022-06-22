@@ -26,4 +26,9 @@
 
 {{ post.content|safe }}
 <hr/>
+{%- match scripts.noscript -%}
+  {% when Some with (message) %}
+    <noscript>{{ message|safe }}</noscript>
+  {% when None %}
+{%- endmatch -%}
 {%- endblock content -%}
