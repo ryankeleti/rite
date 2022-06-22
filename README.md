@@ -12,7 +12,7 @@ the templates, rendering module, and static & style files.
 If you want to use this code, you can edit the `templates` and
 `content` directories with your own layout and content, which I
 have stripped from this repository. A lot of static files and
-resources are hardcoded,so there is some cleanup that could be
+resources are hardcoded, so there is some cleanup that could be
 achieved in that area.
 
 Please let me know if you do intend to use this code,
