@@ -1,0 +1,21 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ title }}</title>
+    <link>{{ posts_url|safe }}</link>
+    <description>{{ description }}</description>
+    <language>en-us</language>
+    <atom:link href="{{ posts_url|safe}}/rss.xml" rel="self" type="application/rss+xml"/>
+    {% for post in posts.iter() %}
+    <item>
+      <title>{{ post.title }}</title>
+      <pubDate>{{ post.rss_date() }}</pubDate>
+      <guid>{{ posts_url|safe }}/{{ post.name }}.html</guid>
+      <link>{{ posts_url|safe }}/{{ post.name }}.html</link>
+      <description><![CDATA[
+        {{ post.content|safe }}
+      ]]>
+      </description>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

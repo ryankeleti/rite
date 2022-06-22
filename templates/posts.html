@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{%- block resources -%}
+<link href="/{{ posts.root()|path }}/rss.xml" rel="alternate" type="application/rss+xml" title="Posts RSS Feed"/>
+{%- endblock resources -%}
+
+{%- block title -%}{{ title }} | Posts{%- endblock title -%}
+
+{%- block nav -%}
+<h1><a href="/">{{ title }}</a></h1>
+<a href="/{{ posts.root()|path }}">Posts</a>
+/ <a href="/{{ posts.root()|path }}/tags/">Tags</a>
+{# Add nav items here #}
+{%- endblock nav -%}
+
+{%- block content -%}
+{{ description|safe }}
+
+{%- for post in posts.iter() -%}
+<span class="post-date">{{ post.date }}</span> :: <a class="post-link" href="{{ post.name }}.html">{{ post.title }}</a>
+<br/>
+{%- endfor -%}
+{%- endblock content -%}

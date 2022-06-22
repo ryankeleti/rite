@@ -1,0 +1,13 @@
+{% for script in scripts %}
+  {% match script %}
+    {% when Script::Embed with { contents } %}
+      <script>{{ contents|safe }}</script>
+    {% when Script::Src with { src } %}
+      <script async src="{{ src|safe }}"></script>
+  {% endmatch %}
+  {% match noscript %}
+    {% when Some with (message) %}
+      <noscript>{{ message|safe }}</noscript>
+    {% when None %}
+  {% endmatch %}
+{% endfor %}

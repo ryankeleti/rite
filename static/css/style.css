@@ -1,0 +1,175 @@
+/* Just a template, modify or fill in missing parts. */
+
+/* Fonts. */
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Ubuntu+Mono&display=swap');
+
+:root {
+  --bg-color: #16161d;
+  --fg-color: #f8f8ff;
+  --link-color: #fff;
+  --max-width: 55rem;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+  font-size: 1rem;
+  line-height: 1.4em;
+  position: relative;
+  max-width: var(--max-width);
+
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1rem;
+  padding: 1rem;
+  
+  color: var(--fg-color);
+  background-color: var(--bg-color);
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+.sidebar {
+  display: flex;
+  align-items: baseline;
+  column-gap: 10px;
+  width: auto;
+
+  font-variant: small-caps;
+}
+
+.content {
+  padding-top: 0.5rem;
+  margin-right: 0;
+}
+
+/* Sidenotes */
+body {
+  counter-reset: sidenote-count;
+}
+
+.sidenote {
+  display: block;
+  font-size: 0.8em;
+  line-height: 1.2;
+  float: left;
+  left: 1rem;
+  clear: both;
+  margin: 1rem 2.5%;
+  vertical-align: baseline;
+  position: relative;
+}
+
+.sidenote::before {
+  content: counter(sidenote-count)". ";
+  position: relative;
+  vertical-align: baseline;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.sidenote-number {
+  counter-increment: sidenote-count;
+}
+
+.sidenote-number::after {
+  display: inline;
+  content: counter(sidenote-count);
+  vertical-align: super;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-right: 0.1em;
+  line-height: 0;
+}
+
+.sidenote-number:hover,
+.sidenote-number:hover .sidenote {
+  text-decoration: underline;
+}
+/* --- */
+
+@media only screen and (min-width: 700px) {
+  body {
+    margin-left: 3rem;
+  }
+
+  .content {
+    margin-left: 200px;
+    margin-right: 10%;
+  }
+
+  .sidebar {
+    display: inline-block;
+    width: 200px;
+    padding: 0 1rem 0 1rem;
+    position: fixed;
+  }
+
+  .sidenote {
+    display: inline;
+    float: right;
+    clear: right;
+    margin-right: -55%;
+    width: 50%;
+    top: -2rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+    vertical-align: baseline;
+    position: relative;
+  }
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px dotted;
+  color: var(--link-color);
+}
+
+a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid;
+  color: var(--link-color);
+
+  cursor: pointer;
+}
+
+hr {
+  border: 0;
+  border-top: 2px dashed;
+  margin-top: 0;
+}
+
+pre {
+  font-size: 0.85em;
+  display: block;
+  white-space: pre;
+  overflow-x: auto;
+  line-height: 1.1em;
+  padding: 0.5em;
+  padding-left: 1em;
+  border-left: 1px solid;
+}
+
+.post-title {
+}
+
+.post-date {
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+.post-tags {
+}
+
+.tag {
+}
+
+.tag-link {
+}
+
+.post-link {
+}

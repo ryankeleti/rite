@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{%- block title -%}{{ title }} | Tags{%- endblock title -%}
+
+{%- block nav -%}
+<h1><a href="/">{{ title }}</a></h1>
+<a href="/{{ posts_root|path }}">Posts</a>
+{# Add nav items here #}
+{%- endblock nav -%}
+
+{%- block content -%}
+<h1>Tags</h1>
+  {%- for tag in tags -%}
+  <a class="tag-link" href="/{{ posts_root|path }}/tags/{{ tag }}.html">{{ tag }}</a>
+  <br/>
+  {%- endfor -%}
+{%- endblock content -%}

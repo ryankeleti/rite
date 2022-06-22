@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{%- block title -%}{{ title }} | Not found{%- endblock title -%}
+
+{%- block nav -%}
+<h1><a href="/">{{ title }}</a></h1>
+{# Add nav items here #}
+{%- endblock nav -%}
+
+{%- block content -%}
+<div class="not-found">
+  {{ message|safe }}
+</div>
+{%- endblock content -%}

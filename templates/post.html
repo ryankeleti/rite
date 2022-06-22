@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{%- block scripts -%}{{ scripts|safe }}{%- endblock scripts -%}
+
+{%- block resources -%}
+<link href="/{{ posts_root|path }}/rss.xml" rel="alternate" type="application/rss+xml" title="Posts RSS Feed"/>
+{%- endblock resources -%}
+
+{%- block title -%}{{ title }} | Posts / {{ post.title }}{%- endblock title -%}
+
+{%- block nav -%}
+<h1><a href="/">{{ title }}</a></h1>
+<a href="/{{ posts_root|path }}">Posts</a>
+/ <a href="/{{ posts_root|path }}/tags/">Tags</a>
+{# Add nav items here #}
+{%- endblock nav -%}
+
+{%- block content -%}
+<h2 class="post-title">{{ post.title }}</h2>
+<span class="post-date">{{ post.date }} ›</span>
+<span class="post-tags">
+  {%- for tag in post.tags -%}
+  <a class="tag" href="/{{ posts_root|path }}/tags/{{ tag }}.html">{{ tag }}</a>{%- if !loop.last -%}, {% endif -%}
+  {%- endfor -%}
+</span>
+
+{{ post.content|safe }}
+<hr/>
+{%- endblock content -%}

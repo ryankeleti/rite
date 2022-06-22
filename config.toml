@@ -1,0 +1,36 @@
+#
+# rite configuration.
+#
+
+# Website base URL.
+url = "https://example.com"
+
+# Base title for title element.
+title = "Website name"
+
+# Location of content sources.
+# Expects at minimum the files:
+#  - index.md (index page content)
+#  - posts.md (posts page description)
+#  - 404.md   (404 not found message, configure with chosen server)
+# If not provided, content will be blank.
+content = "content"
+
+# Location of post sources.
+posts = "posts"
+
+# build path for the generated files.
+build_root = "public"
+
+# Relative (to build) posts root.
+posts_root = "posts"
+
+# Post syntax theme. See https://docs.rs/syntect/latest/syntect/highlighting/struct.Theme.html.
+# For example:
+# syntax_theme = "base16-ocean.light.tmTheme"
+
+# Extra posts scripts (links).
+posts_embed_scripts = "posts/scripts"
+
+# Extra posts scripts (embedded).
+posts_src_scripts = ["https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"]

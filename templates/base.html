@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="my site"/>
+    {%- block meta -%}{%- endblock meta -%}
+
+    <link href="/static/css/style.css" rel="stylesheet"/>
+    <link href="/static/icon/favicon.ico" rel="icon"/>
+
+    {%- block resources -%}{%- endblock resources -%}
+    {%- block scripts -%}{%- endblock scripts -%}
+
+    <title>{%- block title -%}{%- endblock title -%}</title>
+  </head>
+  <body>
+    <nav class="sidebar">
+      {%- block nav -%}{%- endblock nav -%}
+    </nav>
+    <main>
+      <div class="content">
+        {%- block content -%}{%- endblock content -%}
+      </div>
+    </main>
+  </body>
+</html>

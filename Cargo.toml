@@ -1,0 +1,13 @@
+[package]
+name = "rite"
+version = "0.0.0"
+authors = ["ryankeleti <code@ryankeleti.com>"]
+edition = "2021"
+
+[dependencies]
+askama = "0.11"
+chrono = "0.4"
+pulldown-cmark = { version = "0.9", default-features = false }
+syntect = "5.0"
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.5"

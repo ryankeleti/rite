@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{%- block title -%}{{ title }}{%- endblock title -%}
+
+{%- block nav -%}
+<h1><a href="/">{{ title }}</a></h1>
+<a href="/{{ posts_root|path }}">Posts</a>
+{%- endblock nav -%}
+
+{%- block content -%}
+{{ content|safe }}
+{%- endblock content -%}
