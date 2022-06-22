@@ -21,8 +21,8 @@ body {
   position: relative;
   max-width: var(--max-width);
 
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: 1rem;
+  margin-left: 1rem;
   margin-top: 1rem;
   padding: 1rem;
   
@@ -44,7 +44,6 @@ body {
 }
 
 .content {
-  padding-top: 0.5rem;
   margin-right: 0;
 }
 
@@ -99,6 +98,7 @@ body {
   }
 
   .content {
+    padding-top: 0.5rem;
     margin-left: 200px;
     margin-right: 10%;
   }
@@ -142,6 +142,14 @@ hr {
   border: 0;
   border-top: 2px dashed;
   margin-top: 0;
+}
+
+pre, code {
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+code {
+  font-size: 0.85em;
 }
 
 pre {
