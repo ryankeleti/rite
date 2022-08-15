@@ -1,6 +1,6 @@
-# rite
+# rite (DEPRECATED)
 
-My site-building code (mostly). (r)yan-site? :)
+My (old) site-building code. (r)yan-site? :)
 
 ## Warning
 
